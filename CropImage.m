@@ -1,4 +1,4 @@
-% Kamran Siddiqui
+% Kamran Siddiqui & Steven Jevnikar
 % Department of Mechanical and Materials Engineering
 % University of Western Ontario
 %====================================================================
