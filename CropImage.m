@@ -16,9 +16,9 @@ is=1; %input(' Enter the start file number, is= ');
 
 foldernum = input(' Enter the folder number to process: ');
 
-pthr=['F:\Paraffin Wax\18Deg - Test 1',num2str(foldernum),'\Input\'];
-pthw=['F:\Paraffin Wax\18Deg - Test 1',num2str(foldernum),'\Input - Cropped'];
-home=['F:\Paraffin Wax\18Deg - Test 1',num2str(foldernum),'\'];
+pthr=['F:\Paraffin Wax\18Deg - Test 1\',num2str(foldernum),'\Input\'];
+pthw=['F:\Paraffin Wax\18Deg - Test 1\',num2str(foldernum),'\Input - Cropped'];
+home=['F:\Paraffin Wax\18Deg - Test 1\',num2str(foldernum),'\'];
 
 D = dir([pthr, '\*.tif']);
 ie = length(D(not([D.isdir])));
@@ -54,7 +54,7 @@ for I=is:ie
     im=imread(imfile1);
     
     
-    im1 = rot90(rot90(rot90(im)));
+    im1 = imcrop(im, [1305 25 1599 2879]);;
     
       
     % output file name
